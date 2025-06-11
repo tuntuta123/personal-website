@@ -3,80 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>Tuna Ozkalkanli</title>
-  <style>
-    :root {
-      --bg: #f9f9f9;
-      --text: #222;
-      --link: #007acc;
-    }
-
-    body.dark {
-      --bg: #1e1e1e;
-      --text: #eee;
-      --link: #4dabf7;
-    }
-
-    body {
-      font-family: system-ui, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin: 0.5rem 0 1.5rem 0;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    #toggle {
-      background: none;
-      border: 1px solid var(--text);
-      padding: 0.4rem 0.8rem;
-      cursor: pointer;
-      margin-top: 1rem;
-      border-radius: 5px;
-      color: var(--text);
-    }
-
-    #toggle:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Hello, I'm Tuna Ozkalkanli</h1>
   <p>CS student at UniCaen, entering final year.</p>
-  <p>
-    Contact me via <a href="mailto:tunaozkalkanli@gmail.com">email</a> or on
-    <a href="https://www.linkedin.com/in/mehmet-tuna-%C3%B6zkalkanl%C4%B1-697bb22a3/" target="_blank">LinkedIn</a>.
-  </p>
 
-  <button id="toggle">Toggle Dark Mode</button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="project.html">Project</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 
-  <script>
-    const btn = document.getElementById('toggle');
-    btn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
+  <button id="theme-toggle">Toggle Theme</button>
+
+  <script src="theme.js"></script>
 </body>
 </html>
