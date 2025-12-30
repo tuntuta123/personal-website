@@ -1,20 +1,20 @@
-html.dark, body.dark {
-  background-color: #1e1e1e;
+/* theme */
+html.dark {
+  background: #1e1e1e;
   color: #eee;
 }
 
-html.light, body.light {
-  background-color: #ffffff;
+html.light {
+  background: #fff;
   color: #111;
 }
 
+/* base */
 body {
   font-family: system-ui, sans-serif;
-  margin: 0;
-  padding: 2rem;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 2rem;
   line-height: 1.6;
 }
 
@@ -25,16 +25,57 @@ h1 {
 
 a {
   color: #4dabf7;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-button#theme-toggle {
+/* buttons */
+button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid currentColor;
+  cursor: pointer;
+}
+
+#theme-toggle {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  cursor: pointer;
+}
+
+/* filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.filter-btn {
+  padding: 8px 12px;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+.filter-btn[aria-pressed="true"] {
+  opacity: 1;
+}
+
+/* projects */
+.projects {
+  display: grid;
+  gap: 12px;
+}
+
+.project-card {
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 12px;
+}
+
+.hidden {
+  display: none;
 }

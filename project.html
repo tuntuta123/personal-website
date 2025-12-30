@@ -11,12 +11,101 @@
 </head>
 <body>
   <h1>Projects</h1>
-  <p>You're probably expecting a bunch of impressive projects here.</p>
-  <p>Well... surprise! I’m still thinking about what to put.</p>
-  <p>Come back later. Or don't. I won't know.</p>
-  <p><a href="/">← Back to Home</a></p>
+
+  <p><strong>Some of the projects here aren't available on my GitHub and are kept in private repositories, but I can provide access upon request.</strong></p>
+
+  <p><a href="https://github.com/tuntuta123">Visit my GitHub profile</a></p>
+
+  <nav class="filters" id="filters">
+    <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter-btn" type="button" data-filter="oop" aria-pressed="false">Object Oriented Programming</button>
+    <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">AI</button>
+    <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web Development</button>
+  </nav>
+
+  <section class="projects" id="projects">
+
+    <h2>Semester 1</h2>
+
+    <h2>Semester 2</h2>
+    <article class="project-card" data-category="oop">
+      <h3>Object-Oriented Programming Project - Python / Tkinter</h3>
+        <p>A team-based academic project focused on applying object-oriented design principles using Python and Tkinter. My first ever academic project with OOP.</p>
+        <p>The application was built with a class based architecture, supported by UML class diagrams to model game logic</p>
+        <p>I was mainly responsible for the main interface and the Snake game module.</p>
+        <p>Developed as part of the course : Python et intro POO</p> 
+    </article>
+
+    <h2>Semester 3</h2>
+    <article class="project-card" data-category="oop">
+      <h3>Turn Based Games Project - Java</h3>
+        <p>Java project designed to model turn based games according to object oriented principles</p>
+        <p>The architecture defines a generic game abstraction with clearly separated game logic, player behavior, and execution flow.</p>
+        <p>The project includes concrete implementations such as Nim and Tic-Tac-Toe, as well as multiple player strategies (human, random, and AI-based using a Negamax algorithm).</p>
+        <p>Developed as part of the course : Programmation JAVA Orientée Objet</p> 
+    </article>
+
+    <h2>Semester 4</h2>
+    <article class="project-card" data-category="web">
+      <h3>CRUD Album Manager - PHP</h3>
+        <p>Web application developed in PHP to manage a collection of rock albums using a basic SQL database.</p> 
+        <p>The project follows an architecture model that separates actions, layout and the database into distinct files.</p> 
+        <p>Core features include listing, inserting, modifying, and deleting albums. Additional functionality includes sorting by release date and genre.</p> 
+        <p>Developed as part of the course: Technologies du Web 3 (TW3)</p>
+    </article>
+
+    <article class="project-card" data-category="oop">
+      <h3>HashLife-Based Conway's Game of Life - Java</h3>
+        <p>I worked on an optimized version of Conway's Game of Life based on the HashLife algorithm. The main focus of this project was implementing the algorithm itself in Java and building a visual simulation.</p> 
+        <p>I designed a quadtree-based structure and used memoization to avoid recomputing identical states, allowing the simulation to scale far beyond a naive cell-by-cell approach. Most of the effort went into translating the theoretical HashLife ideas into an already existing code.</p> 
+        <p>A significant part of this project was coordinating its implementation with two other team members. I had to both fully understand the HashLife algorithm and translate it into Java while also keeping the implementation consistent with the design. This involved discussing data structures and aligning design desicisions.</p>
+        <p>Bonus features were also implemented including: A menu where you can chose between simulating with or without HashLife (for comparison sakes), cosmetic feautures, shape selection to place and observe on the simulation and a small challenge mode called puzzle. </p>
+        <p>Developed as part of the course: Projet 1</p>
+    </article>
+
+    <article class="project-card" data-category="oop">
+      <h3>Battleship (Bataille Navale) - Java</h3>
+        <p>A team-based Java project implementing the classic Battleship game using a Model-View-Controller (MVC) architecture.</p>
+        <p>The project includes multiple game modes (human vs human and human vs computer) and a graphical interface built with Java Swing. The code separated into different packages to allow parallel development and better responsibility separation.</p>
+        <p>My main contributions focused on the core game logic, including ship modeling, custom iterators and a significant part of the test suite..</p>
+        <p>Developed as part of the course: Interfaces Graphiques et Design Patterns</p>
+    </article>
+
+    <h2>Semester 5</h2>
+    <article class="project-card" data-category="ai">
+      <h3>BlocksWorld AI Project (CSP + Planning + Data Mining) - Java</h3>
+        <p>This project is a full AI toolbox built around the BlocksWorld domain. The project was developed cumulatively across the entire semester: first modelling implications and variables, then implementing classic planning algorithms and constraint satisfaction for state construction and lastly implementing Apriori to extract patterns from large sets of states.</p>
+        <p>For planning, I implemented several planners (BFS/DFS/Dijkstra/A*) and compared them on the same BlocksWorld instances. I also wrote custom heuristics to make A* practical on harder configurations.</p>
+        <p>On the CSP side, I built solvers ranging from basic backtracking to MAC (Maintaining Arc Consistency) with multiple variable and value heuristics (domain-size, random, etc.) to speed up search</p>
+        <p>I used Apriori to discover recurring relationships between block positions and constraints.</p>
+        <p>Finally, I built demos to compare planners as well as CSPs with different solvers and to extract recurring relationships.</p>
+        <p>Developed as part of the course: AI</p>
+    </article>
+
+    <article class="project-card" data-category="web">
+      <h3>Basic List Application - React Native & Neo4j (GraphQL)</h3>
+        <p>This project is a mobile application developed using React Native, connected to a Neo4j database through a GraphQL API. The goal was to design a basic client-side application with authentication, data storage, and dynamic user interaction.</p>
+        <p>The application allows users to manage multiple TodoLists and their associated TodoItems. Each list and item is stored in Neo4j, with all data exchanges handled via GraphQL queries and mutations.</p>
+        <p>The TodoItems view supports full CRUD operations, including item creation, deletion, and status toggling (done/not done). The progress of each list is computed dynamically and displayed using a progress bar based on completed items.</p>
+        <p>Developed as part of the course: Programmation d'application client (TW4)</p>
+    </article>
+
+    <article class="project-card" data-category="web">
+      <h3>MVCR Animals Web Application - PHP</h3>
+      <p>This project is a web application built following the MVCR (Model-View-Controller-Router) architecture.</p>
+      <p>The application revolves around a simple <code>Animal</code> model and allows users to browse a list of animals, view detailed pages, and add new entries. The storage layer was designed to be "flexible", starting with in memory data and later extended to a MySQL database using PDO and prepared statements.</p>
+      <p>The controller layer coordinates user actions such as listing animals, displaying details, and creating new entries, while redirecting all presentation logic to the view. The view part is only responsible for HTML generation and user feedback.</p>
+      <p>In addition to the main web interface, I implemented a lightweight JSON API exposing animal data.</p>
+      <p>Developed as part of the course: Advanced Web Application Programming</p>
+    </article>
+
+  </section>
+
+  <p><a href="index.html">← Back to Home</a></p>
 
   <button id="theme-toggle">Toggle Theme</button>
+
   <script src="theme.js"></script>
+  <script src="projects.js"></script>
 </body>
 </html>
