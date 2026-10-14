@@ -54,16 +54,39 @@ button {
   display: flex;
   gap: 10px;
   margin: 16px 0 20px;
+  list-style: none; /* remove bullets if this is a ul/ol */
+  padding: 0; /* remove default list padding */
+}
+
+.filters a {
+  text-decoration: none; /* ensure links inside filters don't underline */
 }
 
 .filter-btn {
   padding: 8px 12px;
   border-radius: 999px;
   opacity: 0.7;
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+  text-decoration: none;
+  transition: color 120ms ease, background-color 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+/* indicate clickable state with dark-green color and subtle background instead of underline */
+.filter-btn:hover,
+.filter-btn:focus {
+  opacity: 1;
+  color: #064e3b; /* dark green */
+  background: rgba(6,78,59,0.06);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(6,78,59,0.08);
 }
 
 .filter-btn[aria-pressed="true"] {
   opacity: 1;
+  color: #064e3b; /* dark green when active */
+  background: rgba(6,78,59,0.08);
 }
 
 /* projects */
