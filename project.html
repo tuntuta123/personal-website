@@ -10,6 +10,14 @@
   <title>Projects</title>
 </head>
 <body>
+  <nav>
+    <ul class="nav">
+      <li><a href="about">About</a></li>
+      <li><a href="project">Projects</a></li>
+      <li><a href="contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <h1>Projects</h1>
 
   <p><strong>Some of the projects here aren't available on my GitHub and are kept in private repositories, but I can provide access upon request.</strong></p>
@@ -56,17 +64,17 @@
 
     <article class="project-card" data-category="oop">
       <h3>HashLife-Based Conway's Game of Life - Java</h3>
-        <p>I worked on an optimized version of Conway's Game of Life based on the HashLife algorithm. The main focus of this project was implementing the algorithm itself in Java and building a visual simulation.</p> 
-        <p>I designed a quadtree-based structure and used memoization to avoid recomputing identical states, allowing the simulation to scale far beyond a naive cell-by-cell approach. Most of the effort went into translating the theoretical HashLife ideas into an already existing code.</p> 
-        <p>A significant part of this project was coordinating its implementation with two other team members. I had to both fully understand the HashLife algorithm and translate it into Java while also keeping the implementation consistent with the design. This involved discussing data structures and aligning design desicisions.</p>
-        <p>Bonus features were also implemented including: A menu where you can chose between simulating with or without HashLife (for comparison sakes), cosmetic feautures, shape selection to place and observe on the simulation and a small challenge mode called puzzle. </p>
+        <p>I worked on an optimized version of Conway's Game of Life based on the HashLife algorithm. The main focus of this project was implementing the algorithm itself in Java and building a vi[...]
+        <p>I designed a quadtree-based structure and used memoization to avoid recomputing identical states, allowing the simulation to scale far beyond a naive cell-by-cell approach. Most of the [...]
+        <p>A significant part of this project was coordinating its implementation with two other team members. I had to both fully understand the HashLife algorithm and translate it into Java whil[...]
+        <p>Bonus features were also implemented including: A menu where you can chose between simulating with or without HashLife (for comparison sakes), cosmetic feautures, shape selection to pla[...]
         <p>Developed as part of the course: Projet 1</p>
     </article>
 
     <article class="project-card" data-category="oop">
       <h3>Battleship (Bataille Navale) - Java</h3>
         <p>A team-based Java project implementing the classic Battleship game using a Model-View-Controller (MVC) architecture.</p>
-        <p>The project includes multiple game modes (human vs human and human vs computer) and a graphical interface built with Java Swing. The code separated into different packages to allow parallel development and better responsibility separation.</p>
+        <p>The project includes multiple game modes (human vs human and human vs computer) and a graphical interface built with Java Swing. The code separated into different packages to allow para[...]
         <p>My main contributions focused on the core game logic, including ship modeling, custom iterators and a significant part of the test suite..</p>
         <p>Developed as part of the course: Interfaces Graphiques et Design Patterns</p>
     </article>
@@ -74,9 +82,9 @@
     <h2>Semester 5</h2>
     <article class="project-card" data-category="ai">
       <h3>BlocksWorld AI Project (CSP + Planning + Data Mining) - Java</h3>
-        <p>This project is a full AI toolbox built around the BlocksWorld domain. The project was developed cumulatively across the entire semester: first modelling implications and variables, then implementing classic planning algorithms and constraint satisfaction for state construction and lastly implementing Apriori to extract patterns from large sets of states.</p>
-        <p>For planning, I implemented several planners (BFS/DFS/Dijkstra/A*) and compared them on the same BlocksWorld instances. I also wrote custom heuristics to make A* practical on harder configurations.</p>
-        <p>On the CSP side, I built solvers ranging from basic backtracking to MAC (Maintaining Arc Consistency) with multiple variable and value heuristics (domain-size, random, etc.) to speed up search</p>
+        <p>This project is a full AI toolbox built around the BlocksWorld domain. The project was developed cumulatively across the entire semester: first modelling implications and variables, the[...]
+        <p>For planning, I implemented several planners (BFS/DFS/Dijkstra/A*) and compared them on the same BlocksWorld instances. I also wrote custom heuristics to make A* practical on harder con[...]
+        <p>On the CSP side, I built solvers ranging from basic backtracking to MAC (Maintaining Arc Consistency) with multiple variable and value heuristics (domain-size, random, etc.) to speed up[...]
         <p>I used Apriori to discover recurring relationships between block positions and constraints.</p>
         <p>Finally, I built demos to compare planners as well as CSPs with different solvers and to extract recurring relationships.</p>
         <p>Developed as part of the course: AI</p>
@@ -84,24 +92,22 @@
 
     <article class="project-card" data-category="web">
       <h3>Basic List Application - React Native & Neo4j (GraphQL)</h3>
-        <p>This project is a mobile application developed using React Native, connected to a Neo4j database through a GraphQL API. The goal was to design a basic client-side application with authentication, data storage, and dynamic user interaction.</p>
-        <p>The application allows users to manage multiple TodoLists and their associated TodoItems. Each list and item is stored in Neo4j, with all data exchanges handled via GraphQL queries and mutations.</p>
-        <p>The TodoItems view supports full CRUD operations, including item creation, deletion, and status toggling (done/not done). The progress of each list is computed dynamically and displayed using a progress bar based on completed items.</p>
+        <p>This project is a mobile application developed using React Native, connected to a Neo4j database through a GraphQL API. The goal was to design a basic client-side application with authe[...]
+        <p>The application allows users to manage multiple TodoLists and their associated TodoItems. Each list and item is stored in Neo4j, with all data exchanges handled via GraphQL queries and [...]
+        <p>The TodoItems view supports full CRUD operations, including item creation, deletion, and status toggling (done/not done). The progress of each list is computed dynamically and displayed[...]
         <p>Developed as part of the course: Programmation d'application client (TW4)</p>
     </article>
 
     <article class="project-card" data-category="web">
       <h3>MVCR Animals Web Application - PHP</h3>
       <p>This project is a web application built following the MVCR (Model-View-Controller-Router) architecture.</p>
-      <p>The application revolves around a simple <code>Animal</code> model and allows users to browse a list of animals, view detailed pages, and add new entries. The storage layer was designed to be "flexible", starting with in memory data and later extended to a MySQL database using PDO and prepared statements.</p>
-      <p>The controller layer coordinates user actions such as listing animals, displaying details, and creating new entries, while redirecting all presentation logic to the view. The view part is only responsible for HTML generation and user feedback.</p>
+      <p>The application revolves around a simple <code>Animal</code> model and allows users to browse a list of animals, view detailed pages, and add new entries. The storage layer was designed t[...]
+      <p>The controller layer coordinates user actions such as listing animals, displaying details, and creating new entries, while redirecting all presentation logic to the view. The view part is[...]
       <p>In addition to the main web interface, I implemented a lightweight JSON API exposing animal data.</p>
       <p>Developed as part of the course: Advanced Web Application Programming</p>
     </article>
 
   </section>
-
-  <p><a href="index.html">← Back to Home</a></p>
 
   <button id="theme-toggle">Toggle Theme</button>
 
