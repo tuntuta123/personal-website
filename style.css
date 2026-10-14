@@ -11,7 +11,7 @@ html.light {
 
 /* base */
 body {
-  font-family: system-ui, sans-serif;
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Monaco", monospace;
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
@@ -21,6 +21,8 @@ body {
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 a {
