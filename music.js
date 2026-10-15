@@ -1,9 +1,10 @@
 
+
 const featuredTrack = {
-  title: "I Appear Missing",
-  artist: "Queens of the Stone Age",
-  cover: "assets/featured-album.jpg",
-  url: "https://open.spotify.com/"
+  title: "SCARING ME",
+  artist: "cleopatrick",
+  cover: "assets/DOOM.jpeg",
+  url: "https://open.spotify.com/track/35Bv4QuokBrmWya208VcK2"
 };
 
 const title = document.getElementById("track-title");

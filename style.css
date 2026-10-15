@@ -1,17 +1,38 @@
-/* theme */
+
+/* ========================================
+   THEME
+======================================== */
+
 html.dark {
   background: #1e1e1e;
   color: #eee;
+  color-scheme: dark;
 }
 
 html.light {
   background: #fff;
   color: #111;
+  color-scheme: light;
 }
 
-/* base */
+
+/* ========================================
+   BASE
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Monaco", monospace;
+  font-family:
+    "SFMono-Regular",
+    "Consolas",
+    "Liberation Mono",
+    "Menlo",
+    "Monaco",
+    monospace;
+
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
@@ -33,7 +54,11 @@ a:hover {
   text-decoration: underline;
 }
 
-/* buttons */
+
+/* ========================================
+   BUTTONS
+======================================== */
+
 button {
   font: inherit;
   color: inherit;
@@ -43,13 +68,67 @@ button {
 }
 
 #theme-toggle {
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 0.5rem 1rem;
 }
 
-/* filters */
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav ul.nav {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul.nav li {
+  margin: 0;
+}
+
+nav ul.nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  border: 1px solid transparent;
+  background: transparent;
+
+  transition:
+    color 120ms ease,
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+nav ul.nav a:hover {
+  color: #064e3b;
+  background: rgba(6, 78, 59, 0.04);
+  border-color: rgba(6, 78, 59, 0.08);
+  box-shadow: none;
+}
+
+nav ul.nav a:focus-visible {
+  outline: 2px solid #4dabf7;
+  outline-offset: 2px;
+}
+
+
+/* ========================================
+   PROJECT FILTERS
+======================================== */
+
 .filters {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin: 16px 0 20px;
 }
@@ -64,7 +143,11 @@ button {
   opacity: 1;
 }
 
-/* projects */
+
+/* ========================================
+   PROJECTS
+======================================== */
+
 .projects {
   display: grid;
   gap: 12px;
@@ -72,7 +155,11 @@ button {
 
 .project-card {
   padding: 12px;
-  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border: 1px solid color-mix(
+    in srgb,
+    currentColor 20%,
+    transparent
+  );
   border-radius: 12px;
 }
 
@@ -80,42 +167,15 @@ button {
   display: none;
 }
 
-/* Minimal quick fix: target the top-level page navigation list so the nav styles apply without changing HTML */
-nav ul.nav {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 20px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
 
-nav ul.nav li { margin: 0; }
+/* ========================================
+   MUSIC SECTION
+======================================== */
 
-nav ul.nav a {
-  text-decoration: none;
-  color: inherit;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  background: transparent;
-  transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
-}
-
-/* dark-green hover/focus without glow */
-nav ul.nav a:hover,
-nav ul.nav a:focus {
-  color: #064e3b;
-  background: rgba(6,78,59,0.04);
-  border-color: rgba(6,78,59,0.08);
-  box-shadow: none;
-  outline: none; /* keep minimal - if you want keyboard focus visible, I'll add a subtle outline */
-}
-
-
-/* music section */
 .music-section {
   margin-top: 3rem;
+  width: 100%;
+  min-width: 0;
 }
 
 .section-heading {
@@ -123,24 +183,34 @@ nav ul.nav a:focus {
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .section-heading h2 {
   font-size: 1.3rem;
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 .section-label {
   font-size: 0.75rem;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
-/* now playing */
+
+/* ========================================
+   NOW PLAYING
+======================================== */
+
 .now-playing {
+  width: 100%;
   padding: 1rem;
+
   border: 1px solid color-mix(
-    in srgb, currentColor 18%, transparent
+    in srgb,
+    currentColor 18%,
+    transparent
   );
+
   border-radius: 10px;
 }
 
@@ -148,32 +218,47 @@ nav ul.nav a:focus {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.75rem;
-  opacity: 0.65;
+
   margin-bottom: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
 
 .status-dot {
+  display: inline-block;
+  flex-shrink: 0;
+
   width: 7px;
   height: 7px;
+
   border-radius: 50%;
   background: #888;
 }
 
 .status-dot.playing {
   background: #1db954;
-  box-shadow: 0 0 7px #1db95455;
+  box-shadow: 0 0 7px rgba(29, 185, 84, 0.3);
 }
+
+
+/* ========================================
+   CURRENT TRACK
+======================================== */
 
 .track {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
 }
 
 .track img {
+  display: block;
+
   width: 72px;
   height: 72px;
+
+  flex-shrink: 0;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -181,6 +266,8 @@ nav ul.nav a:focus {
 .track-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
   min-width: 0;
   gap: 4px;
 }
@@ -188,7 +275,13 @@ nav ul.nav a:focus {
 .track-info a {
   color: inherit;
   font-size: 0.95rem;
+  font-weight: 600;
+
   overflow-wrap: anywhere;
+}
+
+.track-info a:hover {
+  color: #4dabf7;
 }
 
 .track-info span {
@@ -196,58 +289,145 @@ nav ul.nav a:focus {
   opacity: 0.65;
 }
 
-/* favorite albums */
+
+/* ========================================
+   FAVORITE ALBUMS
+======================================== */
+
 .favorites-heading {
   font-size: 0.9rem;
   font-weight: 500;
+
   margin: 1.8rem 0 1rem;
 }
 
 .favorite-albums {
   display: grid;
+
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-}
 
-.album {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  color: inherit;
-  font-weight: normal;
+  width: 100%;
   min-width: 0;
 }
 
-.album img {
+.favorite-albums .album {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  gap: 3px;
+
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.favorite-albums .album img {
+  display: block;
+
   width: 100%;
-  aspect-ratio: 1;
+  height: auto;
+  aspect-ratio: 1 / 1;
+
   object-fit: cover;
   border-radius: 6px;
-  transition: opacity 150ms ease;
+
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
 }
 
-.album:hover img {
-  opacity: 0.75;
+.favorite-albums .album:hover img {
+  opacity: 0.8;
+  transform: translateY(-2px);
 }
 
-.album span {
+.favorite-albums .album span {
   font-size: 0.8rem;
+  font-weight: 600;
+
   margin-top: 5px;
   overflow-wrap: anywhere;
 }
 
-.album small {
+.favorite-albums .album small {
   font-size: 0.7rem;
+  line-height: 1.5;
   opacity: 0.6;
 }
 
+.favorite-albums .album:hover span {
+  color: #4dabf7;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
 @media (max-width: 480px) {
+  body {
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  nav ul.nav {
+    gap: 4px;
+  }
+
+  nav ul.nav a {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+
+  .music-section {
+    margin-top: 2rem;
+  }
+
   .section-label {
     display: none;
   }
 
+  .now-playing {
+    padding: 0.85rem;
+  }
+
+  .track img {
+    width: 64px;
+    height: 64px;
+  }
+
   .favorite-albums {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.6rem;
+  }
+
+  .favorite-albums .album span {
+    font-size: 0.7rem;
+  }
+
+  .favorite-albums .album small {
+    font-size: 0.65rem;
   }
 }
 
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .favorite-albums .album img,
+  nav ul.nav a {
+    transition: none;
+  }
+
+  .favorite-albums .album:hover img {
+    transform: none;
+  }
+}
