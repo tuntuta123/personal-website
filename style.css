@@ -111,3 +111,143 @@ nav ul.nav a:focus {
   box-shadow: none;
   outline: none; /* keep minimal - if you want keyboard focus visible, I'll add a subtle outline */
 }
+
+
+/* music section */
+.music-section {
+  margin-top: 3rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.section-heading h2 {
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+/* now playing */
+.now-playing {
+  padding: 1rem;
+  border: 1px solid color-mix(
+    in srgb, currentColor 18%, transparent
+  );
+  border-radius: 10px;
+}
+
+.music-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  opacity: 0.65;
+  margin-bottom: 1rem;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #888;
+}
+
+.status-dot.playing {
+  background: #1db954;
+  box-shadow: 0 0 7px #1db95455;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.track img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 4px;
+}
+
+.track-info a {
+  color: inherit;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.track-info span {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+/* favorite albums */
+.favorites-heading {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 1.8rem 0 1rem;
+}
+
+.favorite-albums {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: inherit;
+  font-weight: normal;
+  min-width: 0;
+}
+
+.album img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: opacity 150ms ease;
+}
+
+.album:hover img {
+  opacity: 0.75;
+}
+
+.album span {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+
+.album small {
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 480px) {
+  .section-label {
+    display: none;
+  }
+
+  .favorite-albums {
+    gap: 0.6rem;
+  }
+}
+

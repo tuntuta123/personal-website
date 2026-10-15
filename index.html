@@ -10,7 +10,7 @@
   <title>Mehmet Tuna Ozkalkanli</title>
 </head>
 <body>
-  <h1>Hello, I'm Mehmet Tuna Ozkalkanli</h1>
+  <h1>Hello, I'm Mehmet Tuna Özkalkanlı</h1>
   <p>M.Sc. Software Engineering Student at the University of Antwerp</p>
 
   <nav>
@@ -22,7 +22,71 @@
     </ul>
   </nav>
 
+
+  
+  <section class="music-section" aria-labelledby="music-heading">
+    <div class="section-heading">
+      <h2 id="music-heading">music.</h2>
+      <span class="section-label">a little less about code</span>
+    </div>
+
+    <div class="now-playing">
+      <div class="music-status">
+        <span class="status-dot" id="music-status-dot"></span>
+        <span id="music-status">not playing right now</span>
+      </div>
+
+      <div class="track">
+        <img
+          id="track-cover"
+          src="assets/featured-album.jpg"
+          alt="Album cover"
+          width="72"
+          height="72"
+        />
+
+        <div class="track-info">
+          <a
+            id="track-title"
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >I Appear Missing</a>
+
+          <span id="track-artist">
+            Queens of the Stone Age
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="favorites-heading">some favorites</h3>
+
+    <div class="favorite-albums">
+      <a class="album" href="https://open.spotify.com/album/2PtzmyMnHRsVvHnsTyqth6?si=b-d8pSPTSJ2hAU_bHJHliw" target="_blank" rel="noopener noreferrer">
+        <img src="assets/for-the-greater-good-of-god.jpeg" alt="A Matter of Life and Death cover" loading="lazy" />
+        <span>A Matter of Life and Death</span>
+        <small>Iron Maiden</small>
+      </a>
+
+      <a class="album" href="https://open.spotify.com/album/5T5NM01392dvvd4EhGrCnj?si=339825ba3a154a40" target="_blank" rel="noopener noreferrer">
+        <img src="assets/like-clockwork.jpeg" alt="Like Clockwork cover" loading="lazy" />
+        <span>...Like Clockwork</span>
+        <small>Queens of the Stone Age</small>
+      </a>
+
+      <a class="album" href="https://open.spotify.com/album/7acEciVtnuTzmwKptkjth5?si=kH_OYKfZTmmEsmCsZ41DcA" target="_blank" rel="noopener noreferrer">
+        <img src="assets/fear-inoculum.jpeg" alt="Fear Inoculum cover" loading="lazy" />
+        <span>Fear Inoculum</span>
+        <small>Tool</small>
+      </a>
+    </div>
+  </section>
+
+
+
   <button id="theme-toggle">Toggle Theme</button>
   <script src="theme.js"></script>
+  <script src="music.js" defer></script>
 </body>
 </html>
