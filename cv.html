@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script>
+    const t = localStorage.getItem('theme') || 'dark';
+    document.documentElement.className = t;
+  </script>
+
+  <link rel="stylesheet" href="/style.css" />
+  <title>CV</title>
+</head>
+
+<body>
+  <h1>Curriculum Vitae</h1>
+  <p>M.Sc. Software Engineering Student at the University of Antwerp</p>
+
+  <nav>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/cv" aria-current="page">CV</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="cv-section">
+    <h2>Still a work in progress.</h2>
+    <p>
+    Apparently, keeping my CV up to date isn't my strongest skill. I'll get around to it eventually.
+    </p>
+  </main>
+
+  <button id="theme-toggle">Toggle Theme</button>
+
+  <script src="/theme.js"></script>
+</body>
+</html>

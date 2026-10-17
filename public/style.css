@@ -431,3 +431,22 @@ nav ul.nav a:focus-visible {
     transform: none;
   }
 }
+
+
+/* CV page */
+
+.cv-section {
+  margin-top: 3rem;
+}
+
+.cv-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cv-section p {
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
