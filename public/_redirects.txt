@@ -2,4 +2,5 @@
 /contact   /contact.html   200
 /projects   /project.html   200
 /cv    /cv.html    200
+/now    /now.html    200
 /          /index.html     200

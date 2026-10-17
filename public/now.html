@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script>
+    const t = localStorage.getItem('theme') || 'dark';
+    document.documentElement.className = t;
+  </script>
+
+  <link rel="stylesheet" href="/style.css" />
+  <title>/now</title>
+</head>
+
+<body>
+  <h1>/now</h1>
+
+  <nav>
+    <ul class="nav">
+      <li><a href="index">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="projects">Projects</a></li>
+      <li><a href="cv">CV</a></li>
+      <li><a href="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="now-section">
+    <p class="now-date">October 2026</p>
+
+    <p>
+      I'm currently in my first semester of the Master's
+      programme in Computer Science at the University of
+      Antwerp, specializing in Software Engineering.
+    </p>
+
+    <p>
+      Most of my time is spent on coursework, particularly
+      software modelling, model-driven engineering, and formal
+      methods. I've been enjoying the theoretical side of
+      software engineering, especially the relationship
+      between models, formalization, and the systems they
+      describe.
+    </p>
+
+    <p>
+      For my research project next semester, I'll (most likely) be working
+      with Arcadia, a model-based systems engineering
+      methodology. I'm currently familiarizing myself with
+      its approach in preparation for the project.
+    </p>
+
+    <p class="now-updated">
+      Last updated: October 2026
+    </p>
+  </main>
+
+  <button id="theme-toggle">Toggle Theme</button>
+  <script src="/theme.js"></script>
+</body>
+</html>
