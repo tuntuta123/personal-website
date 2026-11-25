@@ -25,13 +25,13 @@ html.light {
 }
 
 body {
-  font-family:
-    "SFMono-Regular",
+  /*font-family:
+    /*"SFMono-Regular",
     "Consolas",
     "Liberation Mono",
     "Menlo",
     "Monaco",
-    monospace;
+    monospace;*/
 
   max-width: 700px;
   margin: 0 auto;
